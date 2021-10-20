@@ -1,0 +1,8 @@
+xpType:tcpls
+mptcpEnabled:0
+file:random
+file_size:62914
+goodputFile:tcpls_client_goodput_drop.log
+interval:5
+perturbationType:drop
+failover:on

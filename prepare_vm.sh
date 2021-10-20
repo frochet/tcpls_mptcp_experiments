@@ -49,10 +49,8 @@ install_minitopo() {
     # First, install mininet
     install_mininet
     # Then fetch the repository
-    git clone https://github.com/qdeconinck/minitopo.git
+    git clone https://github.com/frochet/minitopo.git
     pushd minitopo
-    # Install the right version of minitopo
-    git checkout minitopo2
     # Get the current dir, and insert an mprun helper command
     echo "mprun() {" | sudo tee -a /etc/bash.bashrc
     printf 'sudo python %s/runner.py "$@"\n' $(pwd) | sudo tee -a /etc/bash.bashrc
@@ -71,10 +69,10 @@ install_pquic() {
     popd
 
     # Now we can prepare pquic
-    git clone https://github.com/p-quic/pquic.git
+    git clone https://github.com/frochet/pquic.git
     pushd pquic
     # Go on a special branch for an additional multipath plugin
-    git checkout mobicom20_mptp
+    git checkout mobicom20_mptp_logger
     git submodule update --init
     cd ubpf/vm/
     make

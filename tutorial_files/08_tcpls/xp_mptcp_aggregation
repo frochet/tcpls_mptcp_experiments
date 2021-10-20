@@ -1,0 +1,8 @@
+xpType:tcpls
+testtype:multaggregate
+mptcpEnabled:1
+file:random
+file_size:62914
+goodputFile:mptcp_client_goodput_aggregation.log
+perturbationType:newpath
+failover:off

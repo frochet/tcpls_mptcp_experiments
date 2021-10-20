@@ -1,0 +1,8 @@
+xpType:tcpls
+mptcpEnabled:1
+file:random
+file_size:62914
+goodputFile:mptcp_client_goodput_ifupdown.log
+interval:5
+perturbationType:ifupdown
+failover:off
