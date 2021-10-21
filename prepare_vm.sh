@@ -58,6 +58,16 @@ install_minitopo() {
     popd
 }
 
+install_picotcpls() {
+  echo "Installing picotcpls"
+  git clone https://github.com/pluginized-protocols/picotcpls.git
+  pushd picotcpls
+  git submodule update --init
+  cmake .
+  make
+  popd
+}
+
 install_pquic() {
     echo "Install PQUIC"
     # We first need to have picotls
@@ -123,8 +133,8 @@ sudo modprobe mptcp_binder" | sudo tee -a /etc/bash.bashrc
 install_dependencies
 install_minitopo
 install_iproute
-install_pquic
 install_mptcp
+install_picotcpls
 
 echo "+------------------------------------------------------+"
 echo "|                                                      |"
