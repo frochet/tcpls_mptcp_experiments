@@ -99,7 +99,7 @@ sysctl net.mptcp.mptcp_enabled=1
 Then you may run the following automated experiment:
 
 ```bash
-mprun -t topo_two_client_paths_two_server_paths -x xp_mptcp_rst
+mprun -t topo_two_client_paths_two_server_paths -x xp_mptcp_drop
 ```
 
 This script will also output a client_tcpdump.log to convert, and a
@@ -108,7 +108,7 @@ goodput file.
 Now disable MPTCP, and do the same for TCPLS:
 
 ```bash
-mprun -t topo_two_client_paths_two_server_paths -x xp_tcpls_rst
+mprun -t topo_two_client_paths_two_server_paths -x xp_tcpls_drop
 ```
 
 In total, you should get 4 .log files, and the tcpdump ones need to be
